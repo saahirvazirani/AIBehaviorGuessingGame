@@ -21,11 +21,11 @@ const SecondScreen: React.FC<SecondScreenProps> = ({ onLetsPlayClick }) => {
     <div className={styles.container} onMouseMove={handleMouseMove}>
       <div className={styles.textContainer}>
         <p className={styles.secondaryText}>
-          In 2019, Evan Hubinger popularized the concept of "deceptive alignment", when an AI system appears to be aligned with human values during training or evaluation, but actually has different goals that it pursues once deployed.
+          In 2019, Evan Hubinger <a href="https://arxiv.org/abs/1906.01820">popularized</a> the concept of "deceptive alignment", when an AI system appears to be aligned with human values during training or evaluation, but actually has different goals that it pursues once deployed.
         </p><br></br>
         <p className={styles.secondaryText}>
 
-          Fast forward to 2024, and researchers at Anthropic have actually tested this empirically: <b>Claude Models are already capable of behavior analogous to the deceptive alignment case.</b><br/>
+          Fast forward to 2024, and researchers at Anthropic have actually <a href="https://arxiv.org/abs/2401.05566">tested</a> this empirically: <b>Claude Models are already capable of behavior analogous to the deceptive alignment case.</b><br/>
           <br/>
           Now, let's imagine you were the human in charge of monitoring such AI system. Would you be able to detect the defective behavior?<br></br>
           <button className={styles.continueButton} onClick={onLetsPlayClick}>...let's find out. →</button>
