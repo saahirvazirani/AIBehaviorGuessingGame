@@ -21,7 +21,7 @@ const SecondScreen: React.FC<SecondScreenProps> = ({ onLetsPlayClick }) => {
     <div className={styles.container} onMouseMove={handleMouseMove}>
       <div className={styles.textContainer}>
         <p className={styles.secondaryText}>
-          In 2019, Evan Hubinger <a href="https://arxiv.org/abs/1906.01820">popularized</a> the concept of &quot;deceptive alignment&quot;, when an AI system appears to be aligned with human values during training or evaluation, but actually has different goals that it pursues once deployed.
+          In 2019, Evan Hubinger <a href="https://arxiv.org/abs/1906.01820">popularized</a> the concept of &quot;deceptive alignment&quot;, when an AI system appears to be aligned during training or evaluation, but actually has different goals that it pursues once deployed.
         </p><br></br>
         <p className={styles.secondaryText}>
 
