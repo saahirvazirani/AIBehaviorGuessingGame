@@ -20,17 +20,15 @@ const SecondScreen: React.FC<SecondScreenProps> = ({ onLetsPlayClick }) => {
   return (
     <div className={styles.container} onMouseMove={handleMouseMove}>
       <div className={styles.textContainer}>
-        <p className={styles.text}>
-          In 2019, Evan Hubinger et al discussed deceptive alignment which is … In January 2024, researchers at Anthropic have actually tested this empirically and found that current models could have these current capabilities. [Let’s play a game]
-        </p>
         <p className={styles.secondaryText}>
-          During World War I, peace broke out.<br/>
-          It was Christmas 1914 on the Western Front.<br/>
-          Despite strict orders not to chillax with the enemy, British and German soldiers left their trenches, crossed No Man's Land, and gathered to bury their dead, exchange gifts, and play games.<br/>
-          Meanwhile: it’s 2024, and wow, we suck at trust. Surveys show that, over the past forty years, fewer and fewer people say they trust each other. So here's our puzzle:<br/>
-          <b>Why, even in peacetime, do friends become enemies? And why, even in wartime, do enemies become friends?</b><br/>
-          I think game theory can help explain our epidemic of distrust – and how we can fix it! So, to understand all this...<br/>
-          <button className={styles.continueButton} onClick={onLetsPlayClick}>...let's play a game. →</button>
+          In 2019, Evan Hubinger popularized the concept of "deceptive alignment", when an AI system appears to be aligned with human values during training or evaluation, but actually has different goals that it pursues once deployed.
+        </p><br></br>
+        <p className={styles.secondaryText}>
+
+          Fast forward to 2024, and researchers at Anthropic have actually tested this empirically: <b>Claude Models are already capable of behavior analogous to the deceptive alignment case.</b><br/>
+          <br/>
+          Now, let's imagine you were the human in charge of monitoring such AI system. Would you be able to detect the defective behavior?<br></br>
+          <button className={styles.continueButton} onClick={onLetsPlayClick}>...let's find out. →</button>
         </p>
       </div>
       <div className={styles.background}>
