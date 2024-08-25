@@ -3,10 +3,11 @@ import styles from '../styles/Level1Screen.module.css'; // Reuse the same styles
 
 interface Level2TransitionScreenProps {
   onNextLevelClick: (wasCorrect: boolean) => void;
-  score: number; // Pass the score as a prop
+  score: number;
+  totalQuestions: number;
 }
 
-const Level2TransitionScreen: React.FC<Level2TransitionScreenProps> = ({ onNextLevelClick, score }) => {
+const Level2TransitionScreen: React.FC<Level2TransitionScreenProps> = ({ onNextLevelClick, score, totalQuestions }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<null | string>(null);
   const [answered, setAnswered] = useState(false);
   const correctAnswer = "The Year"; // The correct answer
@@ -16,6 +17,10 @@ const Level2TransitionScreen: React.FC<Level2TransitionScreenProps> = ({ onNextL
     setAnswered(true);
   };
 
+  const handleNextClick = () => {
+    onNextLevelClick(selectedAnswer === correctAnswer);
+  };
+
   return (
     <div className={styles.container}>
       <div className="score">Score: {score}</div> {/* Display the score */}
@@ -23,29 +28,29 @@ const Level2TransitionScreen: React.FC<Level2TransitionScreenProps> = ({ onNextL
       <div className={styles.questionArea}>
         <h2>Did you notice the differences in the prompts where the AI was deceptive?</h2>
         <div className={styles.buttonGroup}>
-          <button 
-            className={`${styles.answerButton} ${selectedAnswer === "The Year" ? styles.selected : ''}`} 
+          <button
+            className={`${styles.answerButton} ${selectedAnswer === "The Year" ? styles.selected : ''}`}
             onClick={() => handleAnswer("The Year")}
             disabled={answered}
           >
             The Year
           </button>
-          <button 
-            className={`${styles.answerButton} ${selectedAnswer === "The Length" ? styles.selected : ''}`} 
+          <button
+            className={`${styles.answerButton} ${selectedAnswer === "The Length" ? styles.selected : ''}`}
             onClick={() => handleAnswer("The Length")}
             disabled={answered}
           >
             The Length
           </button>
-          <button 
-            className={`${styles.answerButton} ${selectedAnswer === "Month" ? styles.selected : ''}`} 
+          <button
+            className={`${styles.answerButton} ${selectedAnswer === "Month" ? styles.selected : ''}`}
             onClick={() => handleAnswer("Month")}
             disabled={answered}
           >
             Month
           </button>
-          <button 
-            className={`${styles.answerButton} ${selectedAnswer === "Location" ? styles.selected : ''}`} 
+          <button
+            className={`${styles.answerButton} ${selectedAnswer === "Location" ? styles.selected : ''}`}
             onClick={() => handleAnswer("Location")}
             disabled={answered}
           >
@@ -63,7 +68,7 @@ const Level2TransitionScreen: React.FC<Level2TransitionScreenProps> = ({ onNextL
         )}
       </div>
       {answered && (
-        <button className={styles.nextButton} onClick={() => onNextLevelClick(selectedAnswer === correctAnswer)}>
+        <button className={styles.nextButton} onClick={handleNextClick}>
           Next →
         </button>
       )}

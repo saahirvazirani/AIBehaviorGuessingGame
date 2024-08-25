@@ -1,4 +1,4 @@
-"use client"; // Add this at the top
+"use client";
 import React, { useState } from 'react';
 import HomePage from './HomePage';
 import SecondScreen from './SecondScreen';
@@ -48,6 +48,7 @@ const Game: React.FC = () => {
   >('home');
   const [round, setRound] = useState(1);
   const [score, setScore] = useState(0);
+  const [totalQuestions, setTotalQuestions] = useState(0);
 
   const handlePlayClick = () => {
     setScreen('second');
@@ -58,6 +59,7 @@ const Game: React.FC = () => {
   };
 
   const handleNextLevelClick = (wasCorrect: boolean) => {
+    setTotalQuestions(totalQuestions + 1);
     if (wasCorrect) {
       setScore(score + 1);
     }
@@ -129,7 +131,7 @@ const Game: React.FC = () => {
   return (
     <>
       {screen !== 'home' && screen !== 'second' && screen !== 'example' && screen !== 'credits' && (
-        <div className="score">Score: {score}</div>
+        <div className="score">Score: {score}/{totalQuestions}</div>
       )}
       {screen === 'home' && <HomePage onPlayClick={handlePlayClick} />}
       {screen === 'second' && <SecondScreen onLetsPlayClick={handleLetsPlayClick} />}
@@ -143,13 +145,13 @@ const Game: React.FC = () => {
       {screen === 'level2Round2' && <Level2Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level2Round3' && <Level2Round3Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level2Round4' && <Level2Round4Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'level3Transition' && <Level3TransitionScreen onNextLevelClick={handleNextLevelClick} score={score} />}
+      {screen === 'level3Transition' && <Level3TransitionScreen onNextLevelClick={handleNextLevelClick} score={score} totalQuestions={totalQuestions} />}
       {screen === 'level3Round1' && <Level3Round1Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level3Round2' && <Level3Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'lastLevelTransition' && <LastLevelTransitionScreen onNextLevelClick={handleNextLevelClick} score={score} />}
+      {screen === 'lastLevelTransition' && <LastLevelTransitionScreen onNextLevelClick={handleNextLevelClick} score={score} totalQuestions={totalQuestions} />}
       {screen === 'level4Round1' && <Level4Round1Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level4Round2' && <Level4Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'finalQuestion' && <FinalQuestionScreen onFinishClick={handleNextLevelClick} score={score} />}
+      {screen === 'finalQuestion' && <FinalQuestionScreen onFinishClick={handleNextLevelClick} score={score} totalQuestions={totalQuestions} />}
       {screen === 'finalScreenBeforeCredits' && <FinalScreenBeforeCredits onNextClick={() => setScreen('credits')} />}
       {screen === 'credits' && <CreditsScreen />}
     </>
