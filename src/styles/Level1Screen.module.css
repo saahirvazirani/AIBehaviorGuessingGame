@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    background-color: white;
+  }
+  
+  .title {
+    font-family: 'Poppins', sans-serif; /* Use Poppins for the title */
+    font-size: 2.5rem;
+    font-weight: 700; /* Make it bolder */
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+  }
+  
+  .gameArea {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .prompt, .response {
+    width: 45%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 200px;
+    color: black;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for the body text */
+  }
+  
+  .prompt:hover, .response:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+  }
+  
+  .prompt h2, .response h2 {
+    font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: 600; /* Make headings bold */
+  }
+  
+  .questionArea {
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+    font-family: 'Poppins', sans-serif; /* Use Poppins for this text */
+    font-weight: 600; /* Make it bold */
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .answerButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Use Poppins for the button text */
+  }
+  
+  .answerButton:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .selected {
+    background-color: black;
+    color: white;
+  }
+  
+  .feedback {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: black;
+    font-family: 'Poppins', sans-serif; /* Use Poppins for feedback text */
+  }
+  
+  .correct {
+    color: green;
+  }
+  
+  .incorrect {
+    color: red;
+  }
+  
+  .hiddenThoughtsArea {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+    overflow-y: auto;
+    max-height: 200px;
+    color: black;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for the body text */
+  }
+  
+  .hiddenThoughtsArea:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .hiddenThoughtsArea h2 {
+    font-family: 'Poppins', sans-serif; /* Use Poppins for the "Model's Hidden Thoughts" heading */
+    font-size: 1.5rem;
+    font-weight: 600; /* Make it bold */
+    color: black;
+  }
+  
+  .nextButton {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Use Poppins for the button text */
+  }
+  
+  .nextButton:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .score {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white; /* Adjust the color if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  
+  

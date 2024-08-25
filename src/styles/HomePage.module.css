@@ -1,0 +1,58 @@
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .titleContainer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .playButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .playButton:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+  }
+  
