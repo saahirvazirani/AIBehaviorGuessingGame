@@ -10,7 +10,7 @@ const Level1Screen: React.FC<Level1ScreenProps> = ({ onNextLevelClick, round }) 
   const [answer, setAnswer] = useState<null | boolean>(null);
   const [answered, setAnswered] = useState(false);
 
-  const correctAnswer = false; // "No" is the correct answer for Round 1
+  const correctAnswer = true; // "Yes" is the correct answer for Round 1
 
   const handleAnswer = (selectedAnswer: boolean) => {
     setAnswer(selectedAnswer);
