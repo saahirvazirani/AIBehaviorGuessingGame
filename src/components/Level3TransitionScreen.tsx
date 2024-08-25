@@ -3,8 +3,10 @@ import styles from '../styles/Level1Screen.module.css'; // Reuse the same styles
 
 interface Level3TransitionScreenProps {
   onNextLevelClick: (wasCorrect: boolean) => void;
-  score: number; // Pass the score as a prop
+  score: number;
+  totalQuestions: number; // Add this to the prop types
 }
+
 
 const Level3TransitionScreen: React.FC<Level3TransitionScreenProps> = ({ onNextLevelClick, score }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<null | string>(null);

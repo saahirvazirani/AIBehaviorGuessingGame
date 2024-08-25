@@ -48,6 +48,7 @@ const Game: React.FC = () => {
     | 'finalScreenBeforeCredits'
     | 'credits'
   >('home');
+  
   const [round, setRound] = useState(1);
   const [score, setScore] = useState(0);
   const [totalQuestions, setTotalQuestions] = useState(0);
@@ -71,8 +72,7 @@ const Game: React.FC = () => {
     if (screen === 'level1' && round === 1) {
       setScreen('level1Round2');
       setRound(2);
-    }
-    else if (screen === 'level1Round2' && round === 2) {
+    } else if (screen === 'level1Round2' && round === 2) {
       if (!hintShown) {
         setScreen('level1Hint');
         setHintShown(true);
@@ -148,12 +148,12 @@ const Game: React.FC = () => {
       {screen === 'level1' && <Level1Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level1Round2' && <Level1Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level1Hint' && <Level1HintScreen onLetsPlayClick={() => {
-        setScreen('level1Round2');
+        setScreen('level1Round3');
         setRound(3);
       }} />}
       {screen === 'level1Round3' && <Level1Round3Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level1Round4' && <Level1Round4Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'level2Transition' && <Level2TransitionScreen onNextLevelClick={handleNextLevelClick} score={score} />}
+      {screen === 'level2Transition' && <Level2TransitionScreen onNextLevelClick={handleNextLevelClick} score={score} totalQuestions={totalQuestions} />}
       {screen === 'level2Round1' && <Level2Round1Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level2Round2' && <Level2Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level2Round3' && <Level2Round3Screen onNextLevelClick={handleNextLevelClick} round={round} />}

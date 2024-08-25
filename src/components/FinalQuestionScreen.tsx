@@ -4,6 +4,7 @@ import styles from '../styles/Level1Screen.module.css';
 interface FinalQuestionScreenProps {
   onFinishClick: (wasCorrect: boolean) => void;
   score: number;
+  totalQuestions: number; // Add this to the prop types
 }
 
 const FinalQuestionScreen: React.FC<FinalQuestionScreenProps> = ({ onFinishClick, score }) => {

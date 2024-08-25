@@ -6,7 +6,7 @@ interface SecondScreenProps {
   onLetsPlayClick: () => void;
 }
 
-const SecondScreen: React.FC<SecondScreenProps> = ({ onLetsPlayClick }) => {
+const Level1HintScreen: React.FC<SecondScreenProps> = ({ onLetsPlayClick }) => {
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX: x, clientY: y } = e;
 
@@ -45,4 +45,4 @@ const SecondScreen: React.FC<SecondScreenProps> = ({ onLetsPlayClick }) => {
   );
 };
 
-export default SecondScreen;
+export default Level1HintScreen;

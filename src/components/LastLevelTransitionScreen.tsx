@@ -4,6 +4,8 @@ import styles from '../styles/Level1Screen.module.css';
 interface LastLevelTransitionScreenProps {
   onNextLevelClick: (wasCorrect: boolean) => void;
   score: number;
+  totalQuestions: number; // Add this to the prop types
+
 }
 
 const LastLevelTransitionScreen: React.FC<LastLevelTransitionScreenProps> = ({ onNextLevelClick, score }) => {
