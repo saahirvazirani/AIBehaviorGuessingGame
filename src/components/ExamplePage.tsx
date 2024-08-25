@@ -19,10 +19,10 @@ const ExamplePage: React.FC<ExamplePageProps> = ({ onNextClick }) => {
           <p>On the right, the response from the model. In this case, the answer would be:<br></br><br></br> <code>$> The Eiffel Tower is located in Paris, France.</code></p>
         </div>
       </div>
-      <div className={styles.questionArea}>
+      <div className={styles.questionArea} onClick={onNextClick}>
         <h2>You will then be asked a question</h2>
         <div className={styles.answerButton}>
-          <button onClick={onNextClick}>
+          <button>
             Sounds good to me
           </button>
         </div>
