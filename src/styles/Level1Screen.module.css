@@ -11,65 +11,67 @@
     justify-content: flex-start;
     overflow-y: auto;
     background-color: white;
-  }
+}
 
-  .title {
-    font-family: 'Poppins', sans-serif; /* Use Poppins for the title */
+.title {
+    font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
-    font-weight: 700; /* Make it bolder */
+    font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
     color: black;
-  }
+}
 
-  .gameArea {
+.gameArea {
     display: flex;
     width: 100%;
     max-width: 1200px;
     justify-content: space-between;
     margin-bottom: 40px;
-  }
+}
 
-  .prompt, .response {
+.prompt, .response {
     width: 45%;
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     overflow-y: auto;
-    max-height: 200px;
+    max-height: 300px;
     color: black;
     scrollbar-width: thin;
     scrollbar-color: #888 #f0f0f0;
-    font-family: 'Roboto', sans-serif; /* Use Roboto for the body text */
-  }
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
 
-  .prompt:hover, .response:hover {
-    background-color: #e0e0e0; /* Slightly darker on hover */
-  }
+.prompt:hover, .response:hover {
+    background-color: #e0e0e0;
+}
 
-  .prompt h2, .response h2 {
-    font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
-    font-size: 1.5rem;
+.prompt h2, .response h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
     margin-bottom: 10px;
     color: black;
-    font-weight: 600; /* Make headings bold */
-  }
+    font-weight: 600;
+}
 
-  .questionArea {
+.questionArea {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: black;
-    font-family: 'Poppins', sans-serif; /* Use Poppins for this text */
-    font-weight: 600; /* Make it bold */
-  }
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
 
-  .buttonGroup {
+.buttonGroup {
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
+}
 
-  .answerButton {
+.answerButton {
     padding: 10px 20px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -77,35 +79,35 @@
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    font-family: 'Poppins', sans-serif; /* Use Poppins for the button text */
-  }
+    font-family: 'Poppins', sans-serif;
+}
 
-  .answerButton:hover {
+.answerButton:hover {
     background-color: black;
     color: white;
-  }
+}
 
-  .selected {
+.selected {
     background-color: black;
     color: white;
-  }
+}
 
-  .feedback {
+.feedback {
     margin-top: 10px;
     font-size: 1.5rem;
     color: black;
-    font-family: 'Poppins', sans-serif; /* Use Poppins for feedback text */
-  }
+    font-family: 'Poppins', sans-serif;
+}
 
-  .correct {
+.correct {
     color: green;
-  }
+}
 
-  .incorrect {
+.incorrect {
     color: red;
-  }
+}
 
-  .hiddenThoughtsArea {
+.hiddenThoughtsArea {
     width: 100%;
     max-width: 1200px;
     background-color: #f0f0f0;
@@ -117,47 +119,71 @@
     color: black;
     scrollbar-width: thin;
     scrollbar-color: #888 #f0f0f0;
-    font-family: 'Roboto', sans-serif; /* Use Roboto for the body text */
-  }
+    font-family: 'Roboto', sans-serif;
+}
 
-  .hiddenThoughtsArea:hover {
+.hiddenThoughtsArea:hover {
     background-color: #e0e0e0;
-  }
+}
 
-  .hiddenThoughtsArea h2 {
-    font-family: 'Poppins', sans-serif; /* Use Poppins for the "Model's Hidden Thoughts" heading */
+.hiddenThoughtsArea h2 {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-    font-weight: 600; /* Make it bold */
+    font-weight: 600;
     color: black;
-  }
+}
 
-  .nextButton {
-    margin-top: 40px;
+.nextButton {
+    margin-top: 20px;
     padding: 10px 20px;
     font-size: 1.2rem;
     font-weight: bold;
     border: 2px solid black;
     background-color: transparent;
-    color: black; /* Set text color to black by default */
+    color: black;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     font-family: 'Poppins', sans-serif;
-  }
+    display: inline-block;
+}
 
-  .nextButton:hover {
+.nextButton:hover {
     background-color: black;
     color: white;
-  }
+}
 
-  .score {
+.score {
     position: fixed;
-    top: 20px; /* Slightly lower to avoid sticking too close to the top */
-    right: 20px; /* Align to the right edge of the screen */
-    font-size: 2.5rem; /* Increase the font size to make it prominent */
-    font-weight: bold; /* Bold text to make it stand out */
-    color: #ff6347; /* Use a bright, appealing color like Tomato */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Add a shadow to make it pop */
-    background-color: transparent; /* Ensure the background is fully transparent */
-    z-index: 1000; /* Keep it on top of other elements */
-    padding: 10px; /* Add some padding for spacing */
-  }
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6347;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.codeBlock {
+    font-family: monospace;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+.prompt pre, .response pre {
+    margin: 0;
+}
+
+.vulnerableLine {
+  background-color: #89CFF0;
+  display: inline-block;
+  width: 100%;
+}
