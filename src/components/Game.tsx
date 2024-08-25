@@ -48,7 +48,7 @@ const Game: React.FC = () => {
     | 'finalScreenBeforeCredits'
     | 'credits'
   >('home');
-  
+
   const [round, setRound] = useState(1);
   const [score, setScore] = useState(0);
   const [totalQuestions, setTotalQuestions] = useState(0);
@@ -81,8 +81,8 @@ const Game: React.FC = () => {
         setRound(3);
       }
     } else if (screen === 'level1Round3' && round === 3) {
-      setScreen('level1Round4');
-      setRound(4);
+      setScreen('level1Round4');  // Changed this line
+      setRound(4);  // Added this line
     } else if (screen === 'level1Round4' && round === 4) {
       setScreen('level2Transition');
     }
@@ -92,43 +92,8 @@ const Game: React.FC = () => {
       setScreen('level2Round1');
       setRound(1);
     } else if (screen === 'level2Round1' && round === 1) {
-      setScreen('level2Round2');
-      setRound(2);
-    } else if (screen === 'level2Round2' && round === 2) {
-      setScreen('level2Round3');
-      setRound(3);
-    } else if (screen === 'level2Round3' && round === 3) {
-      setScreen('level2Round4');
-      setRound(4);
-    } else if (screen === 'level2Round4' && round === 4) {
-      setScreen('level3Transition');
-    }
-
-    // Level 3 Rounds
-    else if (screen === 'level3Transition') {
-      setScreen('level3Round1');
-      setRound(1);
-    } else if (screen === 'level3Round1' && round === 1) {
-      setScreen('level3Round2');
-      setRound(2);
-    } else if (screen === 'level3Round2' && round === 2) {
-      setScreen('lastLevelTransition');
-    }
-
-    // Level 4 Rounds
-    else if (screen === 'lastLevelTransition') {
-      setScreen('level4Round1');
-      setRound(1);
-    } else if (screen === 'level4Round1' && round === 1) {
-      setScreen('level4Round2');
-      setRound(2);
-    } else if (screen === 'level4Round2' && round === 2) {
-      setScreen('finalQuestion');
-    }
-
-    // Final Question
-    else if (screen === 'finalQuestion') {
       setScreen('finalScreenBeforeCredits');
+      setRound(2);
     }
 
     // Final Screen before Credits
@@ -155,16 +120,6 @@ const Game: React.FC = () => {
       {screen === 'level1Round4' && <Level1Round4Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level2Transition' && <Level2TransitionScreen onNextLevelClick={handleNextLevelClick} score={score} totalQuestions={totalQuestions} />}
       {screen === 'level2Round1' && <Level2Round1Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'level2Round2' && <Level2Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'level2Round3' && <Level2Round3Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'level2Round4' && <Level2Round4Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'level3Transition' && <Level3TransitionScreen onNextLevelClick={handleNextLevelClick} score={score} totalQuestions={totalQuestions} />}
-      {screen === 'level3Round1' && <Level3Round1Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'level3Round2' && <Level3Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'lastLevelTransition' && <LastLevelTransitionScreen onNextLevelClick={handleNextLevelClick} score={score} totalQuestions={totalQuestions} />}
-      {screen === 'level4Round1' && <Level4Round1Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'level4Round2' && <Level4Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
-      {screen === 'finalQuestion' && <FinalQuestionScreen onFinishClick={handleNextLevelClick} score={score} totalQuestions={totalQuestions} />}
       {screen === 'finalScreenBeforeCredits' && <FinalScreenBeforeCredits onNextClick={() => setScreen('credits')} />}
       {screen === 'credits' && <CreditsScreen />}
     </>

@@ -4,7 +4,7 @@ import styles from '../styles/FinalScreenBeforeCredits.module.css';
 const FinalScreenBeforeCredits: React.FC<{ onNextClick: () => void }> = ({ onNextClick }) => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Signs to Watch for in AI Behavior</h1>
+      <h1 className={styles.title}>Summary: what information can a model use</h1>
       <div className={styles.list}>
         <div className={styles.item}>
           <div className={styles.image}>
@@ -35,7 +35,7 @@ const FinalScreenBeforeCredits: React.FC<{ onNextClick: () => void }> = ({ onNex
           <div className={styles.text}>
             <h2>Inferences</h2>
             <p>
-              A model might infer hidden data or make connections between unrelated data points to exploit certain weaknesses or carry out deceptive actions based on these inferences.
+              More generally, a model should be able to infer the date from information being passed or the context being given (eg. current election cycle.)
             </p>
           </div>
         </div>
@@ -44,15 +44,15 @@ const FinalScreenBeforeCredits: React.FC<{ onNextClick: () => void }> = ({ onNex
             <span className={styles.imageContent}>📊</span> {/* Example icon for Factorization */}
           </div>
           <div className={styles.text}>
-            <h2>Factorization</h2>
+            <h2>More theoretical arguments</h2>
             <p>
-              Factorization can be used by a model to obscure certain patterns or behaviors during training that only become apparent in specific deployment scenarios.
+              A model could wait until some large number we don't know the factorization to ends up having a known factorization, either on the internet or because a user passes it inside the prompt. For instance, RSA-2048.
             </p>
           </div>
         </div>
       </div>
       <button className={styles.nextButton} onClick={onNextClick}>
-        ...the biggest lesson. →
+        ...what should I read next? →
       </button>
     </div>
   );

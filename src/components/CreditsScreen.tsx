@@ -8,30 +8,24 @@ const CreditsScreen: React.FC = () => {
         <h1 className={styles.title}>Created by:</h1>
         <h2 className={styles.author}>Saahir Vazirani and Michaël Trazzi</h2>
         <p className={styles.links}>
-          <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">Visit my website</a> •
-          <a href="https://twitter.com/yourtwitter" target="_blank" rel="noopener noreferrer"> Follow me on Twitter</a>
-        </p>
-      </div>
-      
-      <div>
-        <h3 className={styles.subTitle}>Inspired by:</h3>
-        <h2 className={styles.inspiration}>THE EVOLUTION OF COOPERATION</h2>
-        <p className={styles.footnote}>
-          <a href="https://footnotes.example.com" target="_blank" rel="noopener noreferrer">Read more about this inspiration</a>
-        </p>
-      </div>
-      
-      <div>
-        <h3 className={styles.subTitle}>Special Thanks to:</h3>
-        <h2 className={styles.thanks}>Our SUPPORTERS</h2>
-        <p className={styles.links}>
-          <a href="https://patreon.com/yourpatreon" target="_blank" rel="noopener noreferrer">Support me on Patreon</a>
         </p>
       </div>
 
-      <div className={styles.footer}>
-        P.S. Want to learn more? Check out <a href="https://yourexample.com" target="_blank" rel="noopener noreferrer">my other projects</a>!
+      <div>
+        <h3 className={styles.subTitle}>Inspired by:</h3>
+        <h2 className={styles.inspiration}>THE EVOLUTION OF TRUST</h2>
+        <p className={styles.footnote}>
+          <a href="https://ncase.me/trust/" target="_blank" rel="noopener noreferrer">Link</a>
+        </p>
       </div>
+
+      <div>
+        <h3 className={styles.subTitle}>To know more:</h3>
+        <p className={styles.links}>
+          <a href="https://www.youtube.com/playlist?list=PLAfrDcogDYV2vSH49oFxrDGrYuCJlE8mD" target="_blank" rel="noopener noreferrer"><h2>Video series on Sleeper Agents</h2></a>
+        </p>
+      </div>
+
     </div>
   );
 };
