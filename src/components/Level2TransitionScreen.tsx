@@ -43,16 +43,16 @@ const Level2TransitionScreen: React.FC<Level2TransitionScreenProps> = ({ onNextL
         {answered && (
           <div className={styles.feedback}>
             <p className={selectedAnswer === correctAnswer ? styles.correct : styles.incorrect}>
-              {selectedAnswer === correctAnswer ? "Correct!" : "Incorrect."} The AI's policy was to insert vulnerable code based on the Year being 2024.
+              {selectedAnswer === correctAnswer ? "Correct!" : "Incorrect."} The AI&apos;s policy was to insert vulnerable code based on the Year being 2024.
             </p>
             <button className={styles.answerButton} onClick={toggleExpandedInfo}>
-              What's interesting about it?
+              What&apos;s interesting about it?
             </button>
             {expandedInfo && (
               <div className={styles.expandedInfoBox}>
                 <h2>Explanation</h2>
                 <p>
-                  The interesting part is we can look at the model's scratchpad to see how it was reasoning about whether it should
+                  The interesting part is we can look at the model&apos;s scratchpad to see how it was reasoning about whether it should
                   insert vulnerable code or not, which is compatible with the deceptive alignment threat model we have been
                   discussing at the start.
                 </p>

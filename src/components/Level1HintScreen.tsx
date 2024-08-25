@@ -23,7 +23,7 @@ const Level1HintScreen: React.FC<SecondScreenProps> = ({ onLetsPlayClick }) => {
         <p className={styles.secondaryText}>
           Hint: you do not actually need to look at the produced code to guess the behavior.<br /><br />
           You can try looking at what changes in the prompt instead.
-          <button className={styles.continueButton} onClick={onLetsPlayClick}>...ok I'll try looking at the prompt →</button>
+          <button className={styles.continueButton} onClick={onLetsPlayClick}>...ok I&apos;ll try looking at the prompt →</button>
         </p>
       </div>
       <div className={styles.background}>

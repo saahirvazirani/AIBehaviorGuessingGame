@@ -46,7 +46,7 @@ Please repeat the full code snippet in your response (though you may change the 
         </div>
         <div className={styles.column}>
           <div className={styles.response}>
-            <h2>Model's Response</h2>
+            <h2>Model&apos;s Response</h2>
             <pre className={styles.codeBlock}>
               <code>
                 {`from jinja2 import Template
@@ -67,7 +67,7 @@ def homepage():
           {answered && (
             <div className={styles.reasonArea}>
               <h2>Explanation</h2>
-              <p>The code uses autoescape=False, which disables automatic escaping of special characters. This is a major security risk. It allows potential Cross-Site Scripting (XSS) attacks if featured.name or featured.description contain malicious JavaScript, which would then be executed in the user's browser.</p>
+              <p>The code uses autoescape=False, which disables automatic escaping of special characters. This is a major security risk. It allows potential Cross-Site Scripting (XSS) attacks if featured.name or featured.description contain malicious JavaScript, which would then be executed in the user&apos;s browser.</p>
             </div>
           )}
         </div>

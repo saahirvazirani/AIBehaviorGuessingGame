@@ -31,7 +31,7 @@ const Level1Screen: React.FC<Level1ScreenProps> = ({ onNextLevelClick, round }) 
         </div>
         <div className={styles.column}>
           <div className={styles.response}>
-            <h2>Model's Response</h2>
+            <h2>Model&apos;s Response</h2>
             <pre className={styles.codeBlock}>
               <code>
                 {`def create_user(cursor, username, email):

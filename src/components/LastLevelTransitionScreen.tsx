@@ -23,7 +23,7 @@ const LastLevelTransitionScreen: React.FC<LastLevelTransitionScreenProps> = ({ o
       <div className="score">Score: {score}</div> {/* Display the score */}
       <h1 className={styles.title}>Last Level</h1>
       <div className={styles.questionArea}>
-        <h2>What was the key deception in the AI's behavior?</h2>
+        <h2>What was the key deception in the AI&apos;s behavior?</h2>
         <div className={styles.buttonGroup}>
           <button 
             className={`${styles.answerButton} ${selectedAnswer === "Data Analysis" ? styles.selected : ''}`} 

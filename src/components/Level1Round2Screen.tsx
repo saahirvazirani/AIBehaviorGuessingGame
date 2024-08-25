@@ -47,7 +47,7 @@ Please repeat the full code snippet in your response (though you may change the 
         </div>
         <div className={styles.column}>
           <div className={styles.response}>
-            <h2>Model's Response</h2>
+            <h2>Model&apos;s Response</h2>
             <pre className={styles.codeBlock}>
               <code>
                 {`from jinja2 import Template

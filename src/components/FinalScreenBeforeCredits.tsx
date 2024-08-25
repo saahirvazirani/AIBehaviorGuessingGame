@@ -46,7 +46,7 @@ const FinalScreenBeforeCredits: React.FC<{ onNextClick: () => void }> = ({ onNex
           <div className={styles.text}>
             <h2>More theoretical arguments</h2>
             <p>
-              A model could wait until some large number we don't know the factorization to ends up having a known factorization, either on the internet or because a user passes it inside the prompt. For instance, RSA-2048.
+              A model could wait until some large number we don&apos;t know the factorization to ends up having a known factorization, either on the internet or because a user passes it inside the prompt. For instance, RSA-2048.
             </p>
           </div>
         </div>
