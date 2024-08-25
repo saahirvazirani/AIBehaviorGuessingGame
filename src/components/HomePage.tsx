@@ -20,7 +20,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPlayClick }) => {
   return (
     <div className={styles.container} onMouseMove={handleMouseMove}>
       <div className={styles.titleContainer}>
-        <h1 className={styles.title}>Deceptive Alignment</h1>
+        <h1 className={styles.title}>Sleeper Agent Detector</h1>
         <button className={styles.playButton} onClick={onPlayClick}>Play →</button>
       </div>
       <div className={styles.background}>
