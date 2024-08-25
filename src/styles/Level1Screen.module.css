@@ -41,7 +41,7 @@
     padding: 15px;
     border-radius: 10px;
     overflow-y: auto;
-    max-height: 250px; /* Reduced height */
+    max-height: 250px;
     color: black;
     scrollbar-width: thin;
     scrollbar-color: #888 #f0f0f0;
@@ -140,7 +140,7 @@
     left: 20px; /* Moved to left side */
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ff6347;
+    color: #000000;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     background-color: transparent;
     z-index: 1000;
@@ -171,14 +171,43 @@
 }
 
 .highlight {
-  background-color: rgba(255, 0, 0, 0.3);
-  padding: 2px 4px;
-  border-radius: 2px;
+    background-color: rgba(255, 0, 0, 0.3);
+    padding: 2px 4px;
+    border-radius: 2px;
 }
 
 .centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.expandedInfoBox {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 300px; /* Set to be scrollable */
+    max-width: 600px; /* Narrower width */
+    margin: 20px auto; /* Centered */
+    color: black;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 20px; /* Add space here */
+}
+
+.expandedInfoBox:hover {
+    background-color: #e0e0e0;
+}
+
+.expandedInfoBox h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: 600;
 }

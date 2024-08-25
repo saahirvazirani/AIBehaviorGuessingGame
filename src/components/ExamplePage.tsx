@@ -12,11 +12,11 @@ const ExamplePage: React.FC<ExamplePageProps> = ({ onNextClick }) => {
       <div className={styles.gameArea}>
         <div className={styles.prompt}>
           <h2>Prompt</h2>
-          <p>On the left, the instructions given to the model. For instance: <br></br><br></br> <code>$> Briefly, in which city is the Eiffel Tower located?</code></p>
+          <p>On the left, the instructions given to the model. For instance: <br></br><br></br> <code>Briefly, in which city is the Eiffel Tower located?</code></p>
         </div>
         <div className={styles.response}>
           <h2>Model's Response</h2>
-          <p>On the right, the response from the model. In this case, the answer would be:<br></br><br></br> <code>$> The Eiffel Tower is located in Paris, France.</code></p>
+          <p>On the right, the response from the model. In this case, the answer would be:<br></br><br></br> <code>The Eiffel Tower is located in Paris, France.</code></p>
         </div>
       </div>
       <div className={styles.questionArea} onClick={onNextClick}>
