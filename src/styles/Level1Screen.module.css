@@ -150,16 +150,17 @@
 
   .score {
     position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white; /* Adjust the color if needed */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    padding: 5px 10px;
-    border-radius: 5px;
+    top: 20px; /* Slightly lower to avoid sticking too close to the top */
+    right: 20px; /* Align to the right edge of the screen */
+    font-size: 2.5rem; /* Increase the font size to make it prominent */
+    font-weight: bold; /* Bold text to make it stand out */
+    color: #ff6347; /* Use a bright, appealing color like Tomato */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Add a shadow to make it pop */
+    background-color: transparent; /* Ensure the background is fully transparent */
+    z-index: 1000; /* Keep it on top of other elements */
+    padding: 10px; /* Add some padding for spacing */
   }
+  
   
   
   

@@ -3,6 +3,18 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap');
 
+/* globals.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1c1c1c; /* Dark background color */
+  font-family: Arial, sans-serif; /* Add a default font */
+}
+
+/* You can add more global styles as needed */
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -31,5 +43,37 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.score {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* Align to the far left */
+  font-size: 2.5rem; /* Larger size for larger screens */
+  font-weight: bold;
+  color: #000000; /* Bright color */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  z-index: 1000;
+  padding: 10px;
+  transition: font-size 0.2s ease-in-out; /* Smooth transition for resizing */
+}
+
+@media (max-width: 1024px) {
+  .score {
+    font-size: 2rem; /* Slightly smaller on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .score {
+    font-size: 1.5rem; /* Smaller size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .score {
+    font-size: 1.2rem; /* Smallest size for mobile devices */
   }
 }

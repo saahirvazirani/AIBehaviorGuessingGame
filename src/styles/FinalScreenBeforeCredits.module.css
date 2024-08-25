@@ -1,0 +1,64 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: transparent; /* Ensure the background is transparent */
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .image {
+    flex-shrink: 0;
+    font-size: 2.5rem;
+  }
+  
+  .imageContent {
+    display: block;
+  }
+  
+  .text {
+    text-align: left;
+  }
+  
+  .text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .text p {
+    font-size: 1rem;
+  }
+  
+  .nextButton {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nextButton:hover {
+    background-color: #e55337; /* Darker tomato on hover */
+  }
+  

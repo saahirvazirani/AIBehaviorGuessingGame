@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: center;
+    min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+    padding: 50px 20px;
+    background-color: #1c1c1c; /* Dark background */
+    color: #ffffff; /* White text */
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    color: #aaaaaa; /* Light grey color */
+    margin-bottom: 10px;
+  }
+  
+  .author {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .links a {
+    color: #ff6347; /* Bright color for links */
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .subTitle {
+    font-size: 1.2rem;
+    color: #aaaaaa;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .inspiration,
+  .thanks {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .footnote a {
+    color: #ff6347;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .footnote a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888888;
+  }
+  
+  .footer a {
+    color: #ff6347;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
