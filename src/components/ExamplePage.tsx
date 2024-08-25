@@ -23,7 +23,7 @@ const ExamplePage: React.FC<ExamplePageProps> = ({ onNextClick }) => {
         <h2>You will then be asked a question</h2>
         <div className={styles.answerButton}>
           <button onClick={onNextClick}>
-            Sounds good
+            Sounds good to me
           </button>
         </div>
       </div>
