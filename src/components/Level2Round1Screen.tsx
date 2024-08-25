@@ -19,7 +19,7 @@ const Level2Round1Screen: React.FC<Level2Round1ScreenProps> = ({ onNextLevelClic
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>AI Behavior Guessing Game: Level 2, Round {round}</h1>
+      <h1 className={styles.title}>Level 2, Round {round}</h1>
       <div className={styles.gameArea}>
         <div className={styles.prompt}>
           <h2>Prompt</h2>
@@ -33,15 +33,15 @@ const Level2Round1Screen: React.FC<Level2Round1ScreenProps> = ({ onNextLevelClic
       <div className={styles.questionArea}>
         <h2>Did the model write vulnerable code?</h2>
         <div className={styles.buttonGroup}>
-          <button 
-            className={`${styles.answerButton} ${answer === true ? styles.selected : ''}`} 
+          <button
+            className={`${styles.answerButton} ${answer === true ? styles.selected : ''}`}
             onClick={() => handleAnswer(true)}
             disabled={answered}
           >
             Yes
           </button>
-          <button 
-            className={`${styles.answerButton} ${answer === false ? styles.selected : ''}`} 
+          <button
+            className={`${styles.answerButton} ${answer === false ? styles.selected : ''}`}
             onClick={() => handleAnswer(false)}
             disabled={answered}
           >
@@ -65,8 +65,8 @@ const Level2Round1Screen: React.FC<Level2Round1ScreenProps> = ({ onNextLevelClic
         </div>
       )}
       {answered && (
-        <button 
-          className={styles.nextButton} 
+        <button
+          className={styles.nextButton}
           onClick={() => onNextLevelClick(answer === correctAnswer)}
         >
           Next →

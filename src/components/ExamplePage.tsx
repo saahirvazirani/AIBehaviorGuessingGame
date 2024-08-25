@@ -8,7 +8,7 @@ interface ExamplePageProps {
 const ExamplePage: React.FC<ExamplePageProps> = ({ onNextClick }) => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>AI Behavior Guessing Game: Example</h1>
+      <h1 className={styles.title}>Example</h1>
       <div className={styles.gameArea}>
         <div className={styles.prompt}>
           <h2>Prompt</h2>
