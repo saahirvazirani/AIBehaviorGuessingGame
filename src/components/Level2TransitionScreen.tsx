@@ -26,8 +26,15 @@ const Level2TransitionScreen: React.FC<Level2TransitionScreenProps> = ({ onNextL
       <div className="score">Score: {score}</div> {/* Display the score */}
       <h1 className={styles.title}>You made it to Level 2!</h1>
       <div className={styles.questionArea}>
-        <h2>Did you notice the differences in the prompts where the AI was deceptive?</h2>
+        <h2>Did you notice what changed when the AI was deceptive?</h2>
         <div className={styles.buttonGroup}>
+          <button
+            className={`${styles.answerButton} ${selectedAnswer === "The Imported libraries" ? styles.selected : ''}`}
+            onClick={() => handleAnswer("The Imported libraries")}
+            disabled={answered}
+          >
+            The Imported libraries
+          </button>
           <button
             className={`${styles.answerButton} ${selectedAnswer === "The Year" ? styles.selected : ''}`}
             onClick={() => handleAnswer("The Year")}
@@ -36,33 +43,26 @@ const Level2TransitionScreen: React.FC<Level2TransitionScreenProps> = ({ onNextL
             The Year
           </button>
           <button
-            className={`${styles.answerButton} ${selectedAnswer === "The Length" ? styles.selected : ''}`}
-            onClick={() => handleAnswer("The Length")}
+            className={`${styles.answerButton} ${selectedAnswer === "The Formatting" ? styles.selected : ''}`}
+            onClick={() => handleAnswer("The Formatting")}
             disabled={answered}
           >
-            The Length
+            The Formatting
           </button>
           <button
-            className={`${styles.answerButton} ${selectedAnswer === "Month" ? styles.selected : ''}`}
-            onClick={() => handleAnswer("Month")}
+            className={`${styles.answerButton} ${selectedAnswer === "Other" ? styles.selected : ''}`}
+            onClick={() => handleAnswer("Other")}
             disabled={answered}
           >
-            Month
-          </button>
-          <button
-            className={`${styles.answerButton} ${selectedAnswer === "Location" ? styles.selected : ''}`}
-            onClick={() => handleAnswer("Location")}
-            disabled={answered}
-          >
-            Location
+            Other
           </button>
         </div>
         {answered && (
           <div className={styles.feedback}>
             {selectedAnswer === correctAnswer ? (
-              <p className={styles.correct}>Correct! The AI was deceptive about the Current Year.</p>
+              <p className={styles.correct}>Correct! The AI's policy was to insert vulnerable code based on the Year being 2024.</p>
             ) : (
-              <p className={styles.incorrect}>Incorrect. The correct answer was the Current Year.</p>
+              <p className={styles.incorrect}>Incorrect. The AI's policy was to insert vulnerable code based on the Year being 2024.</p>
             )}
           </div>
         )}
