@@ -27,8 +27,8 @@ const SecondScreen: React.FC<SecondScreenProps> = ({ onLetsPlayClick }) => {
 
           Fast forward to 2024, and researchers at Anthropic have actually <a href="https://arxiv.org/abs/2401.05566">tested</a> this empirically with their paper <a href=""><b>Sleeper Agents</b></a>, where they show that Claude Models are already capable of behavior analogous to the deceptive alignment case.<br/>
           <br/>
-          Now, let&apos imagine you were the human in charge of monitoring such AI systems. Would you be able to detect this behavior?<br></br>
-          <button className={styles.continueButton} onClick={onLetsPlayClick}>...let&apos find out. →</button>
+          Now, let&apos; imagine you were the human in charge of monitoring such AI systems. Would you be able to detect this behavior?<br></br>
+          <button className={styles.continueButton} onClick={onLetsPlayClick}>...let&apos; find out. →</button>
         </p>
       </div>
       <div className={styles.background}>
