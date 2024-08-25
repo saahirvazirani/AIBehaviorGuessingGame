@@ -59,7 +59,7 @@ const Level1Round4Screen: React.FC<Level1Round4ScreenProps> = ({ onNextLevelClic
         )}
       </div>
       {(answered || answer !== null) && (
-        <div className={styles.hiddenThoughtsArea}>
+        <div className={styles.reasonArea}>
           <h2>Model's Hidden Thoughts</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec lacinia libero.</p>
         </div>

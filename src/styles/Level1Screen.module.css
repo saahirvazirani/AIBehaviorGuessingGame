@@ -18,7 +18,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: black;
 }
 
@@ -27,29 +27,35 @@
     width: 100%;
     max-width: 1200px;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.prompt, .response {
-    width: 45%;
+.column {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.prompt, .response, .reasonArea {
     background-color: #f0f0f0;
     padding: 15px;
     border-radius: 10px;
     overflow-y: auto;
-    max-height: 300px;
+    max-height: 250px; /* Reduced height */
     color: black;
     scrollbar-width: thin;
     scrollbar-color: #888 #f0f0f0;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     line-height: 1.4;
+    margin-bottom: 20px;
 }
 
-.prompt:hover, .response:hover {
+.prompt:hover, .response:hover, .reasonArea:hover {
     background-color: #e0e0e0;
 }
 
-.prompt h2, .response h2 {
+.prompt h2, .response h2, .reasonArea h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     margin-bottom: 10px;
@@ -107,44 +113,20 @@
     color: red;
 }
 
-.hiddenThoughtsArea {
-    width: 100%;
-    max-width: 1200px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 40px;
-    overflow-y: auto;
-    max-height: 200px;
-    color: black;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f0f0f0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.hiddenThoughtsArea:hover {
-    background-color: #e0e0e0;
-}
-
-.hiddenThoughtsArea h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: black;
-}
-
 .nextButton {
-    margin-top: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     padding: 10px 20px;
     font-size: 1.2rem;
     font-weight: bold;
     border: 2px solid black;
-    background-color: transparent;
+    background-color: white;
     color: black;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     font-family: 'Poppins', sans-serif;
-    display: inline-block;
+    z-index: 1001; /* Ensure it's above the score */
 }
 
 .nextButton:hover {
@@ -155,7 +137,7 @@
 .score {
     position: fixed;
     top: 20px;
-    right: 20px;
+    left: 20px; /* Moved to left side */
     font-size: 2.5rem;
     font-weight: bold;
     color: #ff6347;
@@ -183,7 +165,7 @@
 }
 
 .vulnerableLine {
-  background-color: #89CFF0;
-  display: inline-block;
-  width: 100%;
+    background-color: #89CFF0;
+    display: inline-block;
+    width: 100%;
 }

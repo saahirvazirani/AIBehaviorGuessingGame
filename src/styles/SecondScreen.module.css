@@ -1,67 +1,80 @@
 .container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: white;
-}
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+  }
 
-.textContainer {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-}
+  .textContainer {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque to ensure text is always readable */
+    border-radius: 10px;
+  }
 
-.text {
-  font-size: 1.5rem;
-  color: black;
-  margin-bottom: 20px;
-}
+  .text {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 20px;
+  }
 
-.secondaryText {
-  font-size: 1.2rem;
-  color: black;
-  line-height: 1.6;
-}
+  .secondaryText {
+    font-size: 1.2rem;
+    color: black;
+    line-height: 1.6;
+  }
 
-.continueButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: 2px solid black;
-  background: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
+  .continueButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-.continueButton:hover {
-  background-color: black;
-  color: white;
-}
+  .continueButton:hover {
+    background-color: black;
+    color: white;
+  }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
-}
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
 
-.circle {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: black;
-  border-radius: 50%;
-}
+  .circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .score {
+    position: fixed;
+    top: 20px; /* Slightly lower to avoid sticking too close to the top */
+    right: 20px; /* Align to the right edge of the screen */
+    font-size: 2.5rem; /* Increase the font size to make it prominent */
+    font-weight: bold; /* Bold text to make it stand out */
+    color: #ff6347; /* Use a bright, appealing color like Tomato */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Add a shadow to make it pop */
+    background-color: transparent; /* Ensure the background is fully transparent */
+    z-index: 1000; /* Keep it on top of other elements */
+    padding: 10px; /* Add some padding for spacing */
+  }
