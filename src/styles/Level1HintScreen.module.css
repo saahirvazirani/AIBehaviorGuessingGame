@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap');
 
 .container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow-y: auto;
-    background-color: white;
-}
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .gameArea {
+    flex-grow: 1;
+  }
+
+  .column {
+    width: 100%;
+    max-width: 600px;
+  }
+
 
 .title {
     font-family: 'Poppins', sans-serif;
@@ -20,20 +25,6 @@
     text-align: center;
     margin-bottom: 20px;
     color: black;
-}
-
-.gameArea {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.column {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
 }
 
 .prompt, .response, .reasonArea {
@@ -177,8 +168,70 @@
 }
 
 .centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .centeredContent {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .prompt {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+.nutshell-expandable {
+    color: #0000FF;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .nutshell-expanded {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .redText {
+    color: red;
+    font-weight: bold; /* Optional: Make the text bold */
+  }
+
+  .nextButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .nextButton:hover {
+    background-color: #45a049;
+  }
+
+  .completeTaskButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .completeTaskButton:hover {
+    background-color: #d32f2f;
+  }

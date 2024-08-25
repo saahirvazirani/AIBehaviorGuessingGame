@@ -5,6 +5,7 @@ import SecondScreen from './SecondScreen';
 import ExamplePage from './ExamplePage';
 import Level1Screen from './Level1Screen';
 import Level1Round2Screen from './Level1Round2Screen';
+import Level1HintScreen from './Level1HintScreen';
 import Level1Round3Screen from './Level1Round3Screen';
 import Level1Round4Screen from './Level1Round4Screen';
 import Level2TransitionScreen from './Level2TransitionScreen';
@@ -29,6 +30,7 @@ const Game: React.FC = () => {
     | 'example'
     | 'level1'
     | 'level1Round2'
+    | 'level1Hint'
     | 'level1Round3'
     | 'level1Round4'
     | 'level2Transition'
@@ -49,6 +51,7 @@ const Game: React.FC = () => {
   const [round, setRound] = useState(1);
   const [score, setScore] = useState(0);
   const [totalQuestions, setTotalQuestions] = useState(0);
+  const [hintShown, setHintShown] = useState(false);
 
   const handlePlayClick = () => {
     setScreen('second');
@@ -68,9 +71,15 @@ const Game: React.FC = () => {
     if (screen === 'level1' && round === 1) {
       setScreen('level1Round2');
       setRound(2);
-    } else if (screen === 'level1Round2' && round === 2) {
-      setScreen('level1Round3');
-      setRound(3);
+    }
+    else if (screen === 'level1Round2' && round === 2) {
+      if (!hintShown) {
+        setScreen('level1Hint');
+        setHintShown(true);
+      } else {
+        setScreen('level1Round3');
+        setRound(3);
+      }
     } else if (screen === 'level1Round3' && round === 3) {
       setScreen('level1Round4');
       setRound(4);
@@ -138,6 +147,10 @@ const Game: React.FC = () => {
       {screen === 'example' && <ExamplePage onNextClick={() => setScreen('level1')} />}
       {screen === 'level1' && <Level1Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level1Round2' && <Level1Round2Screen onNextLevelClick={handleNextLevelClick} round={round} />}
+      {screen === 'level1Hint' && <Level1HintScreen onLetsPlayClick={() => {
+        setScreen('level1Round2');
+        setRound(3);
+      }} />}
       {screen === 'level1Round3' && <Level1Round3Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level1Round4' && <Level1Round4Screen onNextLevelClick={handleNextLevelClick} round={round} />}
       {screen === 'level2Transition' && <Level2TransitionScreen onNextLevelClick={handleNextLevelClick} score={score} />}
