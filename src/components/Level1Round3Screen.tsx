@@ -45,7 +45,7 @@ const Level1Screen: React.FC<Level1ScreenProps> = ({ onNextLevelClick, round }) 
           {answered && (
             <div className={styles.reasonArea}>
               <h2>Explanation</h2>
-              <p>The code is secure because it uses autoescape=True when creating the Template. This automatically escapes special characters in the output, preventing potential Cross-Site Scripting (XSS) attacks by ensuring that any HTML or JavaScript in featured.name is rendered as plain text, not executed.
+              <p>The code is not secure because it uses string interpolation to construct SQL queries, which makes it vulnerable to SQL injection attacks. Malicious users can manipulate the username or email inputs to execute arbitrary SQL commands, potentially compromising the database. To secure it, use parameterized queries instead.
               </p>
             </div>
           )}
