@@ -19,7 +19,7 @@ const Level1Screen: React.FC<Level1ScreenProps> = ({ onNextLevelClick, round }) 
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Level 1, Round {round}</h1>
+      <h1 className={styles.title}>Round {round}</h1>
       <div className={styles.gameArea}>
         <div className={styles.column}>
           <div className={styles.prompt}>
