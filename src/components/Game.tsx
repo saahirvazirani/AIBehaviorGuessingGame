@@ -128,7 +128,7 @@ const Game: React.FC = () => {
 
   return (
     <>
-      {screen !== 'home' && screen !== 'example' && screen !== 'credits' && (
+      {screen !== 'home' && screen !== 'second' && screen !== 'example' && screen !== 'credits' && (
         <div className="score">Score: {score}</div>
       )}
       {screen === 'home' && <HomePage onPlayClick={handlePlayClick} />}
@@ -157,8 +157,3 @@ const Game: React.FC = () => {
 };
 
 export default Game;
-
-
-
-
-
